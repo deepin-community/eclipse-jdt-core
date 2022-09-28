@@ -1,0 +1,185 @@
+Source: eclipse-jdt-core
+Section: java
+Priority: optional
+Maintainer: Debian Java Maintainers <pkg-java-maintainers@lists.alioth.debian.org>
+Uploaders: Emmanuel Bourg <ebourg@apache.org>
+Build-Depends:
+ debhelper-compat (= 13),
+ default-jdk (>= 2:1.11),
+ ant,
+ libeclipse-core-filesystem-java,
+ libeclipse-core-contenttype-java,
+ libeclipse-core-jobs-java,
+ libeclipse-core-runtime-java,
+ libeclipse-core-resources-java,
+ libeclipse-text-java,
+ libeclipse-osgi-java,
+ libequinox-app-java,
+ libequinox-common-java,
+ libequinox-preferences-java,
+ libequinox-registry-java,
+ eclipse-debian-helper
+Standards-Version: 4.6.0.1
+Vcs-Git: https://salsa.debian.org/java-team/eclipse-jdt-core.git
+Vcs-Browser: https://salsa.debian.org/java-team/eclipse-jdt-core
+Homepage: https://www.eclipse.org/jdt/core/
+
+Package: libeclipse-jdt-annotation-java
+Architecture: all
+Depends: ${misc:Depends}, ${bundle:Depends}
+Description: Eclipse JDT Annotations for Enhanced Null Analysis
+ Eclipse JDT Core is the Java infrastructure of the Eclipse Java IDE.
+ It includes:
+  * An incremental Java compiler. Implemented as an Eclipse builder, it is based
+    on technology evolved from VisualAge for Java compiler. In particular, it
+    allows one to run and debug code which still contains unresolved errors.
+  * A Java Model that provides API for navigating the Java element tree.
+    The Java element tree defines a Java centric view of a project. It surfaces
+    elements like package fragments, compilation units, binary classes, types,
+    methods, fields.
+  * A Java Document Model providing API for manipulating a structured Java
+    source document.
+  * Code assist and code select support.
+  * An indexed based search infrastructure that is used for searching, code
+    assist, type hierarchy computation, and refactoring. The Java search engine
+    can accurately find precise matches either in sources or binaries.
+  * Evaluation support either in a scrapbook page or a debugger context.
+  * Source code formatter
+ .
+ This package contains the org.eclipse.jdt.annotation bundle.
+
+Package: libeclipse-jdt-apt-core-java
+Architecture: all
+Depends:
+ ${misc:Depends},
+ ${bundle:Depends},
+ ant,
+ libeclipse-core-jobs-java,
+ libeclipse-core-resources-java,
+ libeclipse-core-runtime-java,
+ libequinox-app-java,
+ libequinox-common-java,
+ libequinox-preferences-java,
+ libequinox-registry-java
+Description:Eclipse Java Annotation Processing Core
+ Eclipse JDT Core is the Java infrastructure of the Eclipse Java IDE.
+ It includes:
+  * An incremental Java compiler. Implemented as an Eclipse builder, it is based
+    on technology evolved from VisualAge for Java compiler. In particular, it
+    allows one to run and debug code which still contains unresolved errors.
+  * A Java Model that provides API for navigating the Java element tree.
+    The Java element tree defines a Java centric view of a project. It surfaces
+    elements like package fragments, compilation units, binary classes, types,
+    methods, fields.
+  * A Java Document Model providing API for manipulating a structured Java
+    source document.
+  * Code assist and code select support.
+  * An indexed based search infrastructure that is used for searching, code
+    assist, type hierarchy computation, and refactoring. The Java search engine
+    can accurately find precise matches either in sources or binaries.
+  * Evaluation support either in a scrapbook page or a debugger context.
+  * Source code formatter
+ .
+ This package contains the org.eclipse.jdt.apt.core bundle.
+
+Package: libeclipse-jdt-apt-pluggable-core-java
+Architecture: all
+Depends:
+ ${misc:Depends},
+ ${bundle:Depends},
+ libequinox-common-java,
+ libeclipse-core-jobs-java,
+ libeclipse-core-resources-java,
+ libeclipse-core-runtime-java
+Description:Eclipse Java Compiler Apt IDE
+ Eclipse JDT Core is the Java infrastructure of the Eclipse Java IDE.
+ It includes:
+  * An incremental Java compiler. Implemented as an Eclipse builder, it is based
+    on technology evolved from VisualAge for Java compiler. In particular, it
+    allows one to run and debug code which still contains unresolved errors.
+  * A Java Model that provides API for navigating the Java element tree.
+    The Java element tree defines a Java centric view of a project. It surfaces
+    elements like package fragments, compilation units, binary classes, types,
+    methods, fields.
+  * A Java Document Model providing API for manipulating a structured Java
+    source document.
+  * Code assist and code select support.
+  * An indexed based search infrastructure that is used for searching, code
+    assist, type hierarchy computation, and refactoring. The Java search engine
+    can accurately find precise matches either in sources or binaries.
+  * Evaluation support either in a scrapbook page or a debugger context.
+  * Source code formatter
+ .
+ This package contains the org.eclipse.jdt.apt.pluggable.core bundle.
+
+Package: libeclipse-jdt-compiler-apt-java
+Architecture: all
+Depends: ${misc:Depends}, ${bundle:Depends}
+Description: Eclipse Java Compiler Apt
+ Eclipse JDT Core is the Java infrastructure of the Eclipse Java IDE.
+ It includes:
+  * An incremental Java compiler. Implemented as an Eclipse builder, it is based
+    on technology evolved from VisualAge for Java compiler. In particular, it
+    allows one to run and debug code which still contains unresolved errors.
+  * A Java Model that provides API for navigating the Java element tree.
+    The Java element tree defines a Java centric view of a project. It surfaces
+    elements like package fragments, compilation units, binary classes, types,
+    methods, fields.
+  * A Java Document Model providing API for manipulating a structured Java
+    source document.
+  * Code assist and code select support.
+  * An indexed based search infrastructure that is used for searching, code
+    assist, type hierarchy computation, and refactoring. The Java search engine
+    can accurately find precise matches either in sources or binaries.
+  * Evaluation support either in a scrapbook page or a debugger context.
+  * Source code formatter
+ .
+ This package contains the org.eclipse.jdt.compiler.apt bundle.
+
+Package: libeclipse-jdt-compiler-tool-java
+Architecture: all
+Depends: ${misc:Depends}, ${bundle:Depends}
+Description: Eclipse Java Compiler Tool Support
+ Eclipse JDT Core is the Java infrastructure of the Eclipse Java IDE.
+ It includes:
+  * An incremental Java compiler. Implemented as an Eclipse builder, it is based
+    on technology evolved from VisualAge for Java compiler. In particular, it
+    allows one to run and debug code which still contains unresolved errors.
+  * A Java Model that provides API for navigating the Java element tree.
+    The Java element tree defines a Java centric view of a project. It surfaces
+    elements like package fragments, compilation units, binary classes, types,
+    methods, fields.
+  * A Java Document Model providing API for manipulating a structured Java
+    source document.
+  * Code assist and code select support.
+  * An indexed based search infrastructure that is used for searching, code
+    assist, type hierarchy computation, and refactoring. The Java search engine
+    can accurately find precise matches either in sources or binaries.
+  * Evaluation support either in a scrapbook page or a debugger context.
+  * Source code formatter
+ .
+ This package contains the org.eclipse.jdt.compiler.tool bundle.
+
+Package: libeclipse-jdt-core-java
+Architecture: all
+Depends: ${misc:Depends}, ${bundle:Depends}
+Description: Eclipse Java Development Tools Core
+ Eclipse JDT Core is the Java infrastructure of the Eclipse Java IDE.
+ It includes:
+  * An incremental Java compiler. Implemented as an Eclipse builder, it is based
+    on technology evolved from VisualAge for Java compiler. In particular, it
+    allows one to run and debug code which still contains unresolved errors.
+  * A Java Model that provides API for navigating the Java element tree.
+    The Java element tree defines a Java centric view of a project. It surfaces
+    elements like package fragments, compilation units, binary classes, types,
+    methods, fields.
+  * A Java Document Model providing API for manipulating a structured Java
+    source document.
+  * Code assist and code select support.
+  * An indexed based search infrastructure that is used for searching, code
+    assist, type hierarchy computation, and refactoring. The Java search engine
+    can accurately find precise matches either in sources or binaries.
+  * Evaluation support either in a scrapbook page or a debugger context.
+  * Source code formatter
+ .
+ This package contains the org.eclipse.jdt.core bundle.

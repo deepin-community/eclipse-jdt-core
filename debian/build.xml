@@ -1,0 +1,86 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project>
+
+  <include file="/usr/share/eclipse-debian-helper/build-eclipse-bundle.xml"/>
+
+  <!-- Eclipse JDT Annotations for Enhanced Null Analysis -->
+  <target name="org.eclipse.jdt.annotation">
+    <make-bundle name="org.eclipse.jdt.annotation" basedir="."/>
+  </target>
+
+  <!-- Eclipse Java Annotation Processing Core -->
+  <target name="org.eclipse.jdt.apt.core" depends="org.eclipse.jdt.core">
+    <make-bundle name="org.eclipse.jdt.apt.core" release="11" basedir="." depends="org.eclipse.jdt.core">
+      <pathelement path="/usr/share/java/ant.jar"/>
+      <pathelement path="/usr/share/java/equinox-app.jar"/>
+      <pathelement path="/usr/share/java/equinox-common.jar"/>
+      <pathelement path="/usr/share/java/equinox-preferences.jar"/>
+      <pathelement path="/usr/share/java/equinox-registry.jar"/>
+      <pathelement path="/usr/share/java/eclipse-core-jobs.jar"/>
+      <pathelement path="/usr/share/java/eclipse-core-resources.jar"/>
+      <pathelement path="/usr/share/java/eclipse-core-runtime.jar"/>
+    </make-bundle>
+  </target>
+
+  <!-- Eclipse Java Compiler Apt IDE -->
+  <target name="org.eclipse.jdt.apt.pluggable.core" depends="org.eclipse.jdt.core,org.eclipse.jdt.apt.core,org.eclipse.jdt.compiler.apt">
+    <make-bundle name="org.eclipse.jdt.apt.pluggable.core" basedir="." depends="org.eclipse.jdt.core,org.eclipse.jdt.apt.core,org.eclipse.jdt.compiler.apt">
+      <pathelement path="/usr/share/java/equinox-common.jar"/>
+      <pathelement path="/usr/share/java/eclipse-core-jobs.jar"/>
+      <pathelement path="/usr/share/java/eclipse-core-resources.jar"/>
+      <pathelement path="/usr/share/java/eclipse-core-runtime.jar"/>
+    </make-bundle>
+  </target>
+
+  <!-- Eclipse Java Annotation Processing UI -->
+  <target name="org.eclipse.jdt.apt.ui" depends="org.eclipse.jdt.core,org.eclipse.jdt.apt.core">
+    <!-- TODO requires org.eclipse.ui.workbench -->
+    <make-bundle name="org.eclipse.jdt.apt.ui" basedir="." depends="org.eclipse.jdt.core,org.eclipse.jdt.apt.core">
+      <pathelement path="/usr/share/java/swt4.jar"/>
+      <pathelement path="/usr/share/java/equinox-common.jar"/>
+      <pathelement path="/usr/share/java/equinox-preferences.jar"/>
+      <pathelement path="/usr/share/java/eclipse-core-resources.jar"/>
+    </make-bundle>
+  </target>
+
+  <!-- Eclipse Java Compiler Apt -->
+  <target name="org.eclipse.jdt.compiler.apt" depends="org.eclipse.jdt.core">
+    <make-bundle name="org.eclipse.jdt.compiler.apt" release="9" basedir="." depends="org.eclipse.jdt.core"/>
+  </target>
+
+  <!-- Eclipse Java Compiler Tool Support -->
+  <target name="org.eclipse.jdt.compiler.tool" depends="org.eclipse.jdt.core">
+    <make-bundle name="org.eclipse.jdt.compiler.tool" basedir="." release="9" depends="org.eclipse.jdt.core"/>
+  </target>
+
+  <!-- ??? -->
+  <target name="org.eclipse.jdt.core.internal.tools">
+    <make-bundle name="org.eclipse.jdt.core.internal.tools" basedir="."/>
+  </target>
+
+  <!-- Eclipse Java Development Tools Core -->
+  <target name="org.eclipse.jdt.core">
+    <!-- Set the version of the compiler in the messages file used by the CLI tool -->
+    <bundle-version name="org.eclipse.jdt.core" basedir="." property="org.eclipse.jdt.core.version"/>
+    <replace token="bundle_qualifier," value="" dir="org.eclipse.jdt.core/batch">
+      <include name="org/eclipse/jdt/internal/compiler/batch/messages.properties"/>
+    </replace>
+    <replace token="bundle_version" value="${org.eclipse.jdt.core.version}" dir="org.eclipse.jdt.core/batch">
+      <include name="org/eclipse/jdt/internal/compiler/batch/messages.properties"/>
+    </replace>
+
+    <make-bundle name="org.eclipse.jdt.core" release="11" basedir=".">
+      <pathelement path="/usr/share/java/equinox-app.jar"/>
+      <pathelement path="/usr/share/java/equinox-common.jar"/>
+      <pathelement path="/usr/share/java/equinox-preferences.jar"/>
+      <pathelement path="/usr/share/java/equinox-registry.jar"/>
+      <pathelement path="/usr/share/java/eclipse-core-contenttype.jar"/>
+      <pathelement path="/usr/share/java/eclipse-core-filesystem.jar"/>
+      <pathelement path="/usr/share/java/eclipse-core-jobs.jar"/>
+      <pathelement path="/usr/share/java/eclipse-core-resources.jar"/>
+      <pathelement path="/usr/share/java/eclipse-core-runtime.jar"/>
+      <pathelement path="/usr/share/java/eclipse-text.jar"/>
+    </make-bundle>
+  </target>
+
+</project>

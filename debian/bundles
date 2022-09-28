@@ -1,0 +1,8 @@
+org.eclipse.jdt.annotation
+org.eclipse.jdt.apt.core
+org.eclipse.jdt.apt.pluggable.core
+#org.eclipse.jdt.apt.ui
+org.eclipse.jdt.compiler.apt
+org.eclipse.jdt.compiler.tool
+org.eclipse.jdt.core
+#org.eclipse.jdt.core.internal.tools

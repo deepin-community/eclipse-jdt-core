@@ -1,0 +1,72 @@
+eclipse-jdt-core (4.21-1) unstable; urgency=medium
+
+  * New upstream release
+    - Refreshed the patch
+    - Require Java 11+
+  * Standards-Version updated to 4.6.0.1
+  * Switch to debhelper level 13
+  * Track the new releases from git.eclipse.org (the GitHub repository is gone)
+
+ -- Emmanuel Bourg <ebourg@apache.org>  Mon, 18 Oct 2021 11:57:23 +0200
+
+eclipse-jdt-core (4.18-1) unstable; urgency=medium
+
+  * New upstream release
+    - Refreshed the patch
+  * Standards-Version updated to 4.5.1
+
+ -- Emmanuel Bourg <ebourg@apache.org>  Mon, 28 Dec 2020 11:27:30 +0100
+
+eclipse-jdt-core (4.17-1) unstable; urgency=medium
+
+  * New upstream release
+    - Removed the record support to build with Java < 14
+
+ -- Emmanuel Bourg <ebourg@apache.org>  Fri, 02 Oct 2020 10:53:51 +0200
+
+eclipse-jdt-core (4.15-1) unstable; urgency=medium
+
+  * New upstream release
+  * Standards-Version updated to 4.5.0
+  * Switch to debhelper level 12
+
+ -- Emmanuel Bourg <ebourg@apache.org>  Sun, 26 Apr 2020 23:52:04 +0200
+
+eclipse-jdt-core (4.12-1) unstable; urgency=medium
+
+  * New upstream release
+
+ -- Emmanuel Bourg <ebourg@apache.org>  Wed, 17 Jul 2019 13:24:13 +0200
+
+eclipse-jdt-core (4.11-1) unstable; urgency=medium
+
+  * New upstream release
+
+ -- Emmanuel Bourg <ebourg@apache.org>  Thu, 11 Jul 2019 11:30:43 +0200
+
+eclipse-jdt-core (4.10-1) unstable; urgency=medium
+
+  * New upstream release
+  * Standards-Version updated to 4.3.0
+
+ -- Emmanuel Bourg <ebourg@apache.org>  Fri, 28 Dec 2018 11:40:05 +0100
+
+eclipse-jdt-core (4.9-1) unstable; urgency=medium
+
+  * New upstream release
+    - The license changed to EPL-2.0
+
+ -- Emmanuel Bourg <ebourg@apache.org>  Mon, 03 Dec 2018 12:59:32 +0100
+
+eclipse-jdt-core (4.8-1) unstable; urgency=medium
+
+  * New upstream release
+  * Fixed the Vcs-Browser URL
+
+ -- Emmanuel Bourg <ebourg@apache.org>  Tue, 27 Nov 2018 12:47:15 +0100
+
+eclipse-jdt-core (4.7.3-1) unstable; urgency=medium
+
+  * Initial release (Closes: #903913)
+
+ -- Emmanuel Bourg <ebourg@apache.org>  Sun, 23 Sep 2018 22:44:40 +0200
